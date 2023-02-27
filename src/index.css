@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300&family=Press+Start+2P&display=swap');
+body{
+  background-color: white;
+  color: rgb(19, 19, 19);
+  overflow-x: hidden;
+}
+header{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  height: 80px;
+  
+  width:100vw;
+}
+header h1{
+  font:400 normal 3em/2em Bebas Neue;
+  z-index: 40;
+}
+.corpo{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1.5em;
+}
+
+.pokemons{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 2.5em;
+  width: 100%;
+}
+.pokemon{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4px;
+  width: 192px;
+  z-index: 10;
+  height: 228px;
+  padding: 0 1em;
+  flex-direction: column;
+  overflow: hidden;
+}
+.pokeid{
+  position: absolute;
+  font:400 normal 3em/1em Bebas Neue;
+  opacity: 30%;
+  z-index: 31;
+  top: -30px;
+  left: 12px;
+}
+.bola{
+  background-color: white;
+  position: absolute;
+  border-radius: 100%;
+  width: 96px;
+  height: 96px;
+  z-index: 30;
+  margin-top: -70px;
+
+}
+.pokebola{
+  position: absolute;
+  z-index: 20;
+  opacity: 30%;
+  width:182px ;
+  height: 182px;
+  top: 90px;
+  transform: rotate(22deg);
+  left: 74px;
+
+}
+.img{
+  z-index: 40;
+  width: 128px;
+  height: 128px;
+  position: relative;
+}
+.pokemon:hover .img{
+  animation: move 2.3s infinite ease-out ;
+}
+p{
+  font:400 normal 1em/1em Inter;
+
+  z-index: 40;
+}
+h2{
+  text-transform: capitalize;
+  margin-bottom: 4px;
+  margin-top: 2px;
+  font-size: 1em;
+  font:600 normal 1.4em/1em 'Inter';
+  z-index: 40;
+}
+@keyframes move {
+  0%{
+    top: -3px;
+    left: -4px;
+  }
+  25%{
+    top: 0px;
+    left: -7px;
+  }
+  50%{
+    top: -3px;
+    left: -3px;
+  }
+  100%{
+    left: 0px;
+    top:0px
+  }
+}
+
