@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300&family=Press+Start+2P&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300&family=Press+Start+2P&display=swap);
 body{
   background-color: white;
-  color: rgb(19, 19, 19);
+  color: rgb(19 19 19);
   overflow-x: hidden;
 }
 header{
@@ -44,6 +44,7 @@ header h1{
   padding: 0 1em;
   flex-direction: column;
   overflow: hidden;
+  box-shadow: 3px 6px 12px #00000030;
 }
 .pokeid{
   position: absolute;
@@ -72,7 +73,6 @@ header h1{
   top: 90px;
   transform: rotate(22deg);
   left: 74px;
-
 }
 .img{
   z-index: 40;
@@ -81,8 +81,10 @@ header h1{
   position: relative;
 }
 .pokemon:hover .img{
-  animation: move 2.3s infinite ease-out ;
+  scale: 0.7;
 }
+
+
 p{
   font:400 normal 1em/1em Inter;
 
@@ -93,25 +95,73 @@ h2{
   margin-bottom: 4px;
   margin-top: 2px;
   font-size: 1em;
-  font:600 normal 1.4em/1em 'Inter';
+  font:600 normal 1.4em/1em Inter;
   z-index: 40;
 }
-@keyframes move {
+
+@keyframes movepo {
   0%{
-    top: -3px;
-    left: -4px;
+    width:182px ;
+    height: 182px;
+    top: 90px;
+    left: 74px;
   }
   25%{
-    top: 0px;
-    left: -7px;
+    width: 116px;
+    height: 116px;
+    z-index: 30;
+    margin-top: -70px;
+    left: 53px;
+    top: 101px;
+    opacity: 100%;
+    transform: rotate(360deg);
   }
   50%{
-    top: -3px;
-    left: -3px;
+    transform: rotate(-45deg);
+  }
+  75%{
+    transform: rotate(45deg);
   }
   100%{
-    left: 0px;
-    top:0px
+    transform: rotate(0deg);
+    width: 116px;
+    height: 116px;
+    z-index: 30;
+    margin-top: -70px;
+    left: 53px;
+    top: 101px;
+    opacity: 100%;
+  }
+}
+@keyframes rotate {
+  0%{
+    transform: rotate(25deg);
+  }
+  100%{
+    transform: rotate(45deg);
   }
 }
 
+.fire {
+  background-color: #f87171;
+}
+
+.grass {
+  background-color: #4ade80;
+}
+
+.electric {
+  background-color: #fbbf24;
+}
+.water{ background-color: #60a5fa}
+	.ground {background-color: #f4e7da;}
+	.rock {background-color: #a8a29e;}
+	.fairy {background-color: #fceaff;}
+	.poison {background-color: #cf4ade;}
+	.bug {background-color: #fdba74;}
+	.dragon {background-color: #97b3e6;}
+	.psychic {background-color: #eaeda1;}
+	.flying {background-color: #38bdf8;}
+	.fighting {background-color: #a8a29e;}
+	.normal{ background-color: #38bdf8;}
+  .ghost{ background-color: #d7d6d6;}
