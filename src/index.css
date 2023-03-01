@@ -79,6 +79,7 @@ header h1{
   width: 128px;
   height: 128px;
   position: relative;
+  filter: drop-shadow(3px 3px 5px #22222256);
 }
 .pokemon:hover .img{
   scale: 0.7;
